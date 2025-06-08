@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.filter-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  scroll-behavior: smooth;
+  margin-bottom: 10px;
+}
+
+.filter-bar::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
+
+.filter-item {
+  flex: 0 0 auto;
+  padding: 10px 20px;
+  background-color: #c300ff1e;
+  color: rgb(124, 0, 0);
+  border-radius: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: kantumruy pro;
+  font-weight: bold;
+}
+
+.filter-item:hover {
+  background-color: #0056b3;
+}
+
+.content {
+  padding: 20px;
+}
+
+.block {
+  height: 300px;
+  background: #f4f4f4;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+header {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  color: #a50000;
+}
+
+header ::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
+header img {
+  height: 50px;
+  margin: 0;
+}
+body {
+  font-family: Arial, sans-serif, Kantumruy Pro;
+  background: #f8f8f8;
+  padding: 10px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgb(136, 189, 235);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card-wrapper {
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.badge {
+  background: #ff5c5c;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 4px;
+}
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+}
+.discount {
+  color: #e60000;
+  font-weight: bold;
+  font-size: 15px;
+}
+p {
+  font-size: 14px;
+}
+strong {
+  display: block;
+  font-size: 15px;
+}
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .card-content p,
+  .price,
+  .discount {
+    font-size: 13px;
+  }
+  strong {
+    font-size: 14px;
+  }
+}
+footer {
+  font-family: Kantumruy Pro, Arial, sans-serif;
+  justify-items: center;
+  margin-top: 15px;
+}
+#kampu {
+  color: #a50000;
+}
